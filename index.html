@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="FlowBotHD">
+  <meta name="keywords" content="Ambiguity, Articulated Objects, Diffusion">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FlowBotHD</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            FlowBotHD: History-Aware Diffuser Handling Ambiguities in Articulated Objects Manipulation
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a>Anonymous Authors</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/imaged/pull_figure.jpg"
+                type="image/jpg">
+      </video> -->
+      <img id="teaser" src="./static/images/pull_figure.jpg"
+                type="image/jpg">
+      </img>
+      <h2 class="subtitle has-text-centered">
+        FlowBotHD handles multi-modality and occlusions in articulated objects manipulation.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce a novel approach to manipulate articulated objects with ambiguities, such as opening a door, in which multi-modality and occlusions create
+            ambiguities about the opening side and direction.
+          </p>
+          <p>
+            Multi-modality occurs when
+            the method to open a fully closed door (push, pull, slide) is uncertain, or the side
+            from which it should be opened is uncertain. Occlusions further obscure the door’s
+            shape from certain angles, creating further ambiguities during the occlusion. 
+          </p>
+          <p>
+            To tackle these challenges, we propose a history-aware diffusion network that models the multi-modal distribution of the articulated object and uses history to disambiguate actions and make stable predictions under occlusions. Experiments and analysis demonstrate the state-of-art performance of our method and specifically improvements in ambiguity-caused failure modes.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <!-- <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div> -->
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- DIffusion Process. -->
+      <div class="column">
+        <h2 class="title is-3">Diffusion Process</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              We visualize the diffusion steps of our model.
+            </p>
+            <!-- <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/matting.mp4"
+                      type="video/mp4">
+            </video> -->
+            <img id="teaser" src="./static/images/diffusion.jpg"
+                      type="image/jpg">
+            </img>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Matting. -->
+
+    <!--/Ambiguity. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Ambiguity Demos</h2>
+
+        <!-- Multimodality. -->
+        <h3 class="title is-4">Predictions under Multimodality</h3>
+        <div class="content has-text-justified">
+          <p>
+            With the help of diffusion, our model can preserve various possible modes for multi-modality cases.
+          </p>
+        </div>
+        <!-- <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_start.jpg"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <p>Start Frame</p>
+          </div>
+          <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider"
+                   step="1" min="0" max="100" value="0" type="range">
+          </div>
+          <div class="column is-3 has-text-centered">
+            <img src="./static/images/interpolate_end.jpg"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            <p class="is-bold">End Frame</p>
+          </div>
+        </div> -->
+        <img id="teaser" src="./static/images/analysis-multimodal.jpg"
+                  type="image/jpg">
+        </img>
+        <br/>
+        <!--/ Multimodality. -->
+
+        <!-- Occlusions. -->
+        <h3 class="title is-4">Predictions under Occlusions
+        </h3>
+        <div class="content has-text-justified">
+          <p>
+            With the help of history, our model can produce stable and high-quality prediction even under severe occlusions.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <!-- <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/replay.mp4"
+                    type="video/mp4">
+          </video> -->
+          <img id="teaser" src="./static/images/analysis-occlusion.jpg"
+                  type="image/jpg">
+        </img>
+        </div>
+        <!-- Occlusions. -->
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
