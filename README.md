@@ -1,6 +1,6 @@
 # FlowBotHD
 
-This is the repository that contains source code for the FlowBotHD.
+This is the repository that contains source code for the website of FlowBotHD.
 
 
 # Website License
