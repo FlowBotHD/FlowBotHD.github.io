@@ -8,6 +8,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FlowBotHD</title>
 
+  <style>
+    .video-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .video-container video {
+      width: 48%; /* Adjust width as needed */
+      height: auto;
+    }
+  </style>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
@@ -78,7 +89,7 @@
         <source src="./static/imaged/pull_figure.jpg"
                 type="image/jpg">
       </video> -->
-      <img id="teaser" src="./static/images/pull_figure.jpg"
+      <img id="teaser" src="./static/images/teaser.png"
                 type="image/jpg">
       </img>
       <h2 class="subtitle has-text-centered">
@@ -175,7 +186,28 @@
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
+        <h2 class="title is-3">Simulation Demos</h2>
+        <div class="video-container">
+        <video id="matting-video" controls playsinline height="100%">
+          <source src="./static/videos/8867_link_1.mp4"
+                  type="video/mp4">
+        </video>
+        <video id="matting-video" controls playsinline height="100%">
+          <source src="./static/videos/8867.mov"
+                  type="video/mp4">
+        </video>
+        </div>
+
+        <div class="video-container">
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/8877_link_2.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/8877.mov"
+                    type="video/mp4">
+          </video>
+          </div>
         <!-- <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -248,7 +280,7 @@
             <p class="is-bold">End Frame</p>
           </div>
         </div> -->
-        <img id="teaser" src="./static/images/analysis-multimodal.jpg"
+        <img id="teaser" src="./static/images/analysis-multimodal-2.jpg"
                   type="image/jpg">
         </img>
         <br/>
@@ -290,6 +322,10 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a> -->
       <a class="icon-link" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
