@@ -19,6 +19,17 @@
     }
   </style>
 
+  <style>
+    .small_video-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .small_video-container video {
+      width: 23%; /* Adjust width as needed */
+      height: auto;
+    }
+  </style>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
@@ -89,7 +100,7 @@
         <source src="./static/imaged/pull_figure.jpg"
                 type="image/jpg">
       </video> -->
-      <img id="teaser" src="./static/images/teaser.png"
+      <img id="teaser" src="./static/images/pull_figure.png"
                 type="image/jpg">
       </img>
       <h2 class="subtitle has-text-centered">
@@ -208,6 +219,7 @@
                     type="video/mp4">
           </video>
           </div>
+
         <!-- <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -215,6 +227,49 @@
       </div>
     </div>
     <!--/ Paper video. -->
+
+    <p>
+      We also provide a few more simulation demos to demonstrate the stable performance of our model on various objects apart from the most ambiguous door category.
+    </p>
+
+    <div class="small_video-container">
+      <video id="matting-video" controls playsinline height="100%">
+        <source src="./static/videos/simulation/101931_link_0.mp4"
+                type="video/mp4">
+      </video>
+      <video id="matting-video" controls playsinline height="100%">
+        <source src="./static/videos/simulation/102667_link_3.mp4"
+                type="video/mp4">
+      </video>
+      <video id="matting-video" controls playsinline height="100%">
+        <source src="./static/videos/simulation/10270_link_1.mp4"
+                type="video/mp4">
+      </video>
+      <video id="matting-video" controls playsinline height="100%">
+        <source src="./static/videos/simulation/103778_link_0.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+
+    <div class="small_video-container">
+      <video id="matting-video" controls playsinline height="100%">
+        <source src="./static/videos/simulation/103789_link_1.mp4"
+                type="video/mp4">
+      </video>
+      <video id="matting-video" controls playsinline height="100%">
+        <source src="./static/videos/simulation/12531_link_0.mp4"
+                type="video/mp4">
+      </video>
+      <video id="matting-video" controls playsinline height="100%">
+        <source src="./static/videos/simulation/45159_link_0.mp4"
+                type="video/mp4">
+      </video>
+      <video id="matting-video" controls playsinline height="100%">
+        <source src="./static/videos/simulation/45790_link_1.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+
   </div>
 </section>
 
@@ -230,15 +285,21 @@
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              We visualize the diffusion steps of our model.
+              We visualize the denoising process of our model. The two videos demonstrate FlowBotHD producing 2 different modes based on the same input observation.
             </p>
-            <!-- <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video> -->
-            <img id="teaser" src="./static/images/diffusion.jpg"
+            <div class="video-container">
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/diffusion_process.mov"
+                        type="video/mp4">
+              </video>
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./static/videos/diffusion_process_2.mov"
+                        type="video/mp4">
+              </video>
+              </div>
+            <!-- <img id="teaser" src="./static/images/diffusion.jpg"
                       type="image/jpg">
-            </img>
+            </img> -->
           </div>
 
         </div>
@@ -255,7 +316,8 @@
         <h3 class="title is-4">Predictions under Multimodality</h3>
         <div class="content has-text-justified">
           <p>
-            With the help of diffusion, our model can preserve various possible modes for multi-modality cases.
+            As demonstrated in the diffusion process visualization, with the help of diffusion, our model can preserve various possible modes for multi-modality cases.
+            We compare our model's predictions against those of the original FlowBot3D on a custom built ambiguous door. We can see that FlowBot3D only makes one sensible, but incorrect prediction, whereas our model is able to predict both possible configurations.
           </p>
         </div>
         <!-- <div class="columns is-vcentered interpolation-panel">
@@ -291,7 +353,8 @@
         </h3>
         <div class="content has-text-justified">
           <p>
-            With the help of history, our model can produce stable and high-quality prediction even under severe occlusions.
+            With the help of history, our model can produce stable and high-quality prediction even under severe occlusions. 
+            The following example is a door opened 90 degrees. Comparing our model's prediction with the original FlowBot3D, we can see that our model is able to predict stable and consistent results even under severe occlusions.
           </p>
         </div>
         <div class="content has-text-centered">
@@ -306,7 +369,13 @@
           </video> -->
           <img id="teaser" src="./static/images/analysis-occlusion.jpg"
                   type="image/jpg">
-        </img>
+          </img>
+          <!-- <img id="teaser" src="./static/images/fridge.jpg"
+                  type="image/jpg">
+          </img>
+          <img id="teaser" src="./static/images/furniture.jpg"
+                  type="image/jpg">
+          </img> -->
         </div>
         <!-- Occlusions. -->
 
