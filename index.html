@@ -20,6 +20,17 @@
   </style>
 
   <style>
+    .video-container-three {
+      display: flex;
+      justify-content: space-between;
+    }
+    .video-container-three video {
+      width: 28%; /* Adjust width as needed */
+      height: auto;
+    }
+  </style>
+
+  <style>
     .small_video-container {
       display: flex;
       justify-content: space-between;
@@ -203,7 +214,8 @@
           pattern of opening an object: make trials at the beginning, once the door is opened a bit, make
           consistent predictions based on past history and consistency check.
         </p>
-        <div class="video-container">
+        <h2 class="title is-5" style="margin-top: 20px;">I. Door Example</h2>
+        <!-- <div class="video-container">
         <video id="matting-video" controls playsinline height="100%">
           <source src="./static/videos/8867_link_1.mp4"
                   type="video/mp4">
@@ -212,8 +224,24 @@
           <source src="./static/videos/8867.mov"
                   type="video/mp4">
         </video>
+        </div> -->
+        <p>(1) FlowBot3D: Fail to open the door!</p>
+        <div class="video-container">
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/8877_link_2_flowbot.mp4"
+                    type="video/mp4">
+          </video>
+          <!-- <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/8877_link_2_nosgp.mp4"
+                    type="video/mp4">
+          </video> -->
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/8877_flow_flowbot.mov"
+                    type="video/mp4">
+          </video>
         </div>
-
+        
+        <p style="margin-top: 10px;">(2) FlowBotHD (Ours): Succeed to open the door!</p>
         <div class="video-container">
           <video id="matting-video" controls playsinline height="100%">
             <source src="./static/videos/8877_link_2.mp4"
@@ -223,7 +251,7 @@
             <source src="./static/videos/8877.mov"
                     type="video/mp4">
           </video>
-          </div>
+        </div>
 
         <!-- <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
@@ -232,7 +260,10 @@
       </div>
     </div>
     <!--/ Paper video. -->
-
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-5" style="margin-top: 20px;">II. General Examples</h2>
+    </div>
+    
     <p>
       We also provide a few more simulation demos to demonstrate the stable performance of our model on various objects apart from the most ambiguous door category.
     </p>
