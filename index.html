@@ -8,6 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FlowBotHD</title>
 
+  <style> 
+    .div-a{ float:left;width:49%;border:1px solid #000} 
+    .div-b{ float:left;width:49%;border:1px solid rgb(170, 13, 13)} 
+  </style> 
+  </head> 
+
   <style>
     .video-container {
       display: flex;
@@ -122,64 +128,6 @@
 </section>
 
 
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -208,40 +156,57 @@
     <!-- Simulation. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Simulation Demos</h2>
-        <p>
-          We provide simulation visualizations for the most ambiguous category: doors. In these visuals, we can see our model and policy’s
-          pattern of opening an object: make trials at the beginning, once the door is opened a bit, make
-          consistent predictions based on past history and consistency check.
-        </p>
-        <h2 class="title is-5" style="margin-top: 20px;">I. Door Example</h2>
-        <!-- <div class="video-container">
-        <video id="matting-video" controls playsinline height="100%">
-          <source src="./static/videos/8867_link_1.mp4"
-                  type="video/mp4">
-        </video>
-        <video id="matting-video" controls playsinline height="100%">
-          <source src="./static/videos/8867.mov"
-                  type="video/mp4">
-        </video>
+        <h2 class="title is-3" style="margin-top: 20px;">Simulation Demos</h2>
+
+        <!-- <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div> -->
+      </div>
+    </div>
+    <p>
+      We provide simulation visualizations for the most ambiguous category: doors. In these visuals, we can see our model and policy’s
+      pattern of opening an object: make trials at the beginning, once the door is opened a bit, make
+      consistent predictions based on past history and consistency check.
+    </p>
+
+    <!--/ Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-5" style="margin-top: 20px; margin-bottom: 20px;">I. Door Example</h2>
+    </div>
+    <!-- <div class="video-container">
+    <video id="matting-video" controls playsinline height="100%">
+      <source src="./static/videos/8867_link_1.mp4"
+              type="video/mp4">
+    </video>
+    <video id="matting-video" controls playsinline height="100%">
+      <source src="./static/videos/8867.mov"
+              type="video/mp4">
+    </video>
+    </div> -->
+    <div class="columns is-centered has-text-centered">
+      <div class="div-a">
         <p>(1) FlowBot3D: Fail to open the door!</p>
+      </div> 
+      <div class="div-b">
+        <p>(2) FlowBotHD (Ours): Succeed to open the door!</p>
+      </div> 
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="div-a">
         <div class="video-container">
           <video id="matting-video" controls playsinline height="100%">
             <source src="./static/videos/8877_link_2_flowbot.mp4"
                     type="video/mp4">
           </video>
-          <!-- <video id="matting-video" controls playsinline height="100%">
-            <source src="./static/videos/8877_link_2_nosgp.mp4"
-                    type="video/mp4">
-          </video> -->
           <video id="matting-video" controls playsinline height="100%">
             <source src="./static/videos/8877_flow_flowbot.mov"
                     type="video/mp4">
           </video>
         </div>
-        
-        <p style="margin-top: 10px;">(2) FlowBotHD (Ours): Succeed to open the door!</p>
+      </div> 
+      <div class="div-b">
         <div class="video-container">
           <video id="matting-video" controls playsinline height="100%">
             <source src="./static/videos/8877_link_2.mp4"
@@ -252,14 +217,9 @@
                     type="video/mp4">
           </video>
         </div>
-
-        <!-- <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div> -->
-      </div>
+      </div> 
     </div>
-    <!--/ Paper video. -->
+
     <div class="columns is-centered has-text-centered">
       <h2 class="title is-5" style="margin-top: 20px;">II. General Examples</h2>
     </div>
@@ -268,7 +228,135 @@
       We also provide a few more simulation demos to demonstrate the stable performance of our model on various objects apart from the most ambiguous door category.
     </p>
 
-    <div class="small_video-container">
+    <div class="columns is-centered has-text-centered", style="margin-top: 10px;">
+      <div class="div-a">
+        <p>(1) FlowBot3D: Fail to open the object!</p>
+      </div> 
+      <div class="div-b">
+        <p>(2) FlowBotHD (Ours): Succeed to open the object!</p>
+      </div> 
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="div-a">
+
+        <div class="video-container">
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbot/100444_link_0.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbot/100444_link_0_flow.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="video-container">
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbot/47180_link_1.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbot/47180_link_1_flow.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="video-container">
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbot/12621_link_0.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbot/12621_link_0_flow.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="video-container">
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbot/47648_link_2.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbot/47648_link_2_flow.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <!-- <div class="video-container">
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbot/7265_link_0.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbot/7265_link_0_flow.mov"
+                    type="video/mp4">
+          </video>
+        </div> -->
+
+      </div> 
+      <div class="div-b">
+
+        <div class="video-container">
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbothd/100444_link_0.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbothd/100444_link_0_flow.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="video-container">
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbothd/47180_link_1.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbothd/47180_link_1_flow.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="video-container">
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbothd/12621_link_0.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbothd/12621_link_0_flow.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="video-container">
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbothd/47648_link_2.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbothd/47648_link_2_flow.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <!-- <div class="video-container">
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbothd/7265_link_0.mp4"
+                    type="video/mp4">
+          </video>
+          <video id="matting-video" controls playsinline height="100%">
+            <source src="./static/videos/demos/flowbothd/7265_link_0_flow.mov"
+                    type="video/mp4">
+          </video>
+        </div> -->
+
+      </div> 
+    </div>
+
+    <!-- <div class="small_video-container">
       <video id="matting-video" controls playsinline height="100%">
         <source src="./static/videos/simulation/101931_link_0.mp4"
                 type="video/mp4">
@@ -304,7 +392,7 @@
         <source src="./static/videos/simulation/45790_link_1.mp4"
                 type="video/mp4">
       </video>
-    </div>
+    </div> -->
 
   </div>
 </section>
