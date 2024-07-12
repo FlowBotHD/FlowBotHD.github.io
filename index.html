@@ -231,16 +231,20 @@
       </div>
     </div>
     <p>
-      We provide simulation visualizations for the most ambiguous category (door) as multi-modality showcases. In these visuals, we can see our model and policy’s
-      pattern of opening an object: make trials at the beginning, once the door is opened a bit, make
-      consistent predictions based on past history and consistency check.
+      We provide simulation visualizations for special cases (multi-modal, occlusion) and also general examples. In these visuals, we can see our model's stable performance on various objects.
     </p>
 
     <!--/ Multi-modality Examples. -->
     <div>
     <div class="columns is-centered has-text-centered">
-      <h2 class="title is-5" style="margin-top: 20px; margin-bottom: 20px;">I. Multi-modality Example</h2>
+      <h2 class="title is-5" style="margin-top: 30px; margin-bottom: 5px;">I. Multi-modality Example</h2>
     </div>
+
+    <p style="margin-bottom: 20px;">
+      We can see from the visuals that FlowBotHD, combined with our proposed policy, 
+      is able to try different possible moving direction and grasp point at fully-closed state, 
+      thus able to open objects despite ambituity at early stage.
+    </p>
     <!-- <div class="video-container">
     <video id="matting-video" controls playsinline height="100%">
       <source src="./static/videos/8867_link_1.mp4"
@@ -392,8 +396,13 @@
     <!-- Occlusion Examples -->
     <div>
     <div class="columns is-centered has-text-centered">
-      <h2 class="title is-5" style="margin-top: 40px; margin-bottom: 20px;">II. Occlusion Examples</h2>
+      <h2 class="title is-5" style="margin-top: 40px; margin-bottom: 5px;">II. Occlusion Examples</h2>
     </div>
+
+    <p style="margin-bottom: 20px;">
+      With history integrated, 
+      FlowBotHD is able to make consistent and stable predictions even at severely occluded angles.
+    </p>
 
     <!-- Case 1-->
     <div class="columns is-centered has-text-centered">
