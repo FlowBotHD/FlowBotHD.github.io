@@ -222,6 +222,58 @@
     <!-- Simulation. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
+        <h2 class="title is-3" style="margin-top: 20px;">Real-world Demos</h2>
+
+        <!-- <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div> -->
+      </div>
+    </div>
+    <p style="margin-bottom: 25px;">
+      We carry out real-world experiments on general objects and specifically our hand-crafted multi-modal door to demonstrate FlowBotHD's ability to function in real world scenarios. 
+    </p>
+
+    <div class="columns is-centered has-text-centered">
+      <video width="640" height="360" controls loop autoplay muted>
+        <source src="./static/videos/real_world/regular_objects.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <p style="margin-bottom: 25px;">
+        <b>Regular Objects:</b> The above videos show that FlowBotHD is capable of opening unambiguous objects. 
+      </p>
+    </div>
+    
+    <div class="columns is-centered has-text-centered">
+      <video width="640" height="360" controls loop autoplay muted>
+        <source src="./static/videos/real_world/doors.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <p style="margin-bottom: 25px;">
+        <b>Multi-modal Door:</b> The above videos show FlowBotHD's ability to make multi-modal predictions. These are successful trials with the first prediction falling into the correct mode that aligns with the current door configuration. If the first prediction falls into other modes, the model will adjust with switch grasp point policy as demonstrated below.
+          (You may see black tape on the back of the door, they are for filling the wood crack and will not affect the model's judgement because they are invisible to the camera placed at the front and also color will not affect methods based only on point clouds). 
+      </p>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <video width="640" height="360" controls loop autoplay muted>
+        <source src="./static/videos/real_world/doorsgp.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <p style="margin-bottom: 25px;">
+        <b>Multi-modal Door (Switch Grasp Point):</b> The above video show the effect of switch grasp point policy when the first prediction falls into a wrong mode, which enables FlowBotHD to adjust from wrong grasp points to a correct one.
+      </p>
+    </div>
+  
+
+    <!-- Simulation. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
         <h2 class="title is-3" style="margin-top: 20px;">Simulation Demos</h2>
 
         <!-- <div class="publication-video">
